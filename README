@@ -1,0 +1,14 @@
+# releer y ver en que afecta 
+http://www.debian.org/doc/packaging-manuals/java-policy/index.html
+
+# aplicar parche para debian
+
+46c46
+< for I in `ls -1 $DBMONSTER_HOME/*.jar $DBMONSTER_HOME/lib/* $DBMONSTER_HOME/log4j.properties`; do
+---
+> for I in `ls -1 $DBMONSTER_HOME/*.jar $DBMONSTER_HOME/lib/* $DBMONSTER_HOME/log4j.properties /usr/share/java/*.jar`; do
+50c50
+< $JAVA_HOME/bin/java $JAVA_OPTS -classpath $CLASSPATH pl.kernelpanic.dbmonster.Launcher $*
+---
+> $JAVA_HOME/java $JAVA_OPTS -classpath $CLASSPATH pl.kernelpanic.dbmonster.Launcher $*
+
