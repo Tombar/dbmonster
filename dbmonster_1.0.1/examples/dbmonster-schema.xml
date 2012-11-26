@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE dbmonster-schema PUBLIC "-//kernelpanic.pl//DBMonster Database Schema DTD 1.1//EN" "http://dbmonster.kernelpanic.pl/dtd/dbmonster-schema-1.1.dtd">
+<dbmonster-schema>
+  <name>Test Schema</name>
+  <table name="GROUPS" rows="5">
+    <key databaseDefault="false">
+      <generator type="pl.kernelpanic.dbmonster.generator.MaxKeyGenerator">
+        <property name="columnName" value="ID"/>
+      </generator>
+    </key>
+    <column name="NAME" databaseDefault="false">
+      <generator type="pl.kernelpanic.dbmonster.generator.StringGenerator">
+        <property name="allowSpaces" value="true"/>
+        <property name="excludeChars" value=""/>
+        <property name="maxLength" value="15"/>
+        <property name="minLength" value="5"/>
+        <property name="nulls" value="0"/>
+      </generator>
+    </column>
+    <column name="DESCRIPTION" databaseDefault="false">
+      <generator type="pl.kernelpanic.dbmonster.generator.StringGenerator">
+        <property name="allowSpaces" value="true"/>
+        <property name="excludeChars" value=""/>
+        <property name="maxLength" value="255"/>
+        <property name="minLength" value="0"/>
+        <property name="nulls" value="0"/>
+      </generator>
+    </column>
+  </table>
+  <table name="USERS" rows="1000">
+    <key databaseDefault="false">
+      <generator type="pl.kernelpanic.dbmonster.generator.MaxKeyGenerator">
+        <property name="columnName" value="ID"/>
+      </generator>
+    </key>
+    <column name="LOGIN" databaseDefault="false">
+      <generator type="pl.kernelpanic.dbmonster.generator.StringGenerator">
+        <property name="allowSpaces" value="true"/>
+        <property name="excludeChars" value="'"/>
+        <property name="maxLength" value="255"/>
+        <property name="minLength" value="0"/>
+        <property name="nulls" value="0"/>
+      </generator>
+    </column>
+    <column name="ID_GROUP" databaseDefault="false">
+      <generator type="pl.kernelpanic.dbmonster.generator.ForeignKeyGenerator">
+        <property name="columnName" value="ID"/>
+        <property name="fastMode" value="true"/>
+        <property name="tableName" value="GROUPS"/>
+      </generator>
+    </column>
+    <column name="NUM_TEST1" databaseDefault="false">
+      <generator type="pl.kernelpanic.dbmonster.generator.NumberGenerator">
+        <property name="maxValue" value="128"/>
+        <property name="minValue" value="0"/>
+        <property name="nulls" value="0"/>
+        <property name="returnedType" value="integer"/>
+        <property name="scale" value="0"/>
+      </generator>
+    </column>
+  </table>
+</dbmonster-schema>

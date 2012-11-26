@@ -1,0 +1,19 @@
+<!--
+    DTD for DBMonster project, version 1.0
+    
+    $Id: dbmonster-schema-1.1.dtd,v 1.3 2003/09/20 06:48:27 majek Exp $
+-->
+
+<!ELEMENT project (name, jdbcViaProperties, properties, schemas)>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT jdbcViaProperties (#PCDATA)>
+
+<!ELEMENT properties (property+)>
+<!ELEMENT property (name, value)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT value (#PCDATA)>
+
+<!ELEMENT schemas (schama+)>
+<!ELEMENT schema EMPTY>
+<!ATTLIST schema file CDATA #REQUIRED>

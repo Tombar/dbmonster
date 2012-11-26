@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>DBMonster - The DBMonster User's Guide - Key Generators</title><style type="text/css" media="all">
+          @import url("../style/maven-base.css");
+          
+			    @import url("../style/maven-theme.css");</style><link rel="stylesheet" href="../style/print.css" type="text/css" media="print"></link><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="author" content="Piotr Maj"></meta><meta name="email" content="piotr.maj@kernelpanic.pl"></meta></head><body class="composite"><div id="banner"><a href="http://dbmonster.kernelpanic.pl/" id="projectLogo"><img alt="dbMonster" src="../gfx/dbmonster-logo.png"></img></a><div class="clear"><hr></hr></div></div><div id="breadcrumbs"><div class="xleft">
+                	Last published: 25 05 2004 22:57 CEST
+                  | Doc for 1.0.1</div><div class="xright"></div><div class="clear"><hr></hr></div></div><div id="leftColumn"><div id="navcolumn"><div id="menuOverview"><h5>Overview</h5><ul><li class="none"><a href="../news.html">What's new?</a></li><li class="none"><a href="../downloads.html">Downloads</a></li><li class="expanded"><a href="../manual/index.html">Manual</a></li><li class="none"><a href="../manual/intro.html">Introduction</a></li><li class="none"><a href="../manual/install.html">Instalation</a></li><li class="none"><a href="../manual/config-running.html">Configuration</a></li><li class="none"><a href="../manual/ant-task.html">Ant task</a></li><li class="none"><strong><a href="../manual/key-generators.html">Key generators</a></strong></li><li class="collapsed"><a href="../manual/data-generators.html">Data generators</a></li><li class="none"><a href="../faq.html">FAQ</a></li><li class="none"><a href="../resources.html">Resources</a></li></ul></div><div id="search"><h5>Search dbMonster</h5><form action="http://www.google.com/search" method="get"><a href="http://www.google.com" class="navlink"><img height="32" width="75" alt="Google" src="http://www.google.com/logos/Logo_25wht.gif"></img></a><input name="q" maxlength="255" size="15" type="text" value="" id="q"></input><input name="btnG" type="submit" value="Go" id="btnG"></input><input name="domains" type="hidden" value="http://dbmonster.kernelpanic.pl"></input><input name="sitesearch" type="hidden" value="http://dbmonster.kernelpanic.pl" id="search"></input></form></div><div id="menuProject_Documentation"><h5>Project Documentation</h5><ul><li class="none"><a href="../index.html">About dbMonster</a></li><li class="collapsed"><a href="../project-info.html">Project Info</a></li><li class="collapsed"><a href="../maven-reports.html">Project Reports</a></li><li class="none"><a href="http://maven.apache.org/development-process.html">Development Process</a></li></ul></div><a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy"><img alt="Built by Maven" src="../images/logos/maven-button-1.png"></img></a></div></div><div id="bodyColumn"><div class="contentBox"><div class="section"><h2><a name="Overview">Overview</a></h2><p>
+       Almost every table in a typical relational database contains
+       a primary key that is unique for every tuple. Such a key can 
+       be build from one or more columns. DBMonster is able to generate
+       key using flexible key generators. Currently only MaxKeyGenerator
+       and StringKeyGenerator are supported in default DBMonster distribution.
+       If you need another key generator you must write it on your own. See the 
+       <a href="config-running.html">example of schema file</a> for details 
+       on how to configure MaxKeyGenerator and StringKeyGenerator.
+    </p><p>
+    StringKeyGenerator produces strings of <b>fixed length</b>. The strings consist
+    of lower case letters [a-z]. Default value is "aaaaaaaa" (8 x a) which 
+    offers quite a big key space at level of 208.827.064.576 unique keys ;).
+    </p><p>
+       As of v.0.3.3 the key has an optional attribute "databaseDefault" which
+       allows you to define that DBMonster should skip this key and let the
+       database to insert default values (Useful for MySQL <code>auto_increment</code> 
+       columns or <code>serial</code> in PostgreSQL).
+    </p></div></div></div><div class="clear"><hr></hr></div><div id="footer"><div class="xright">© 2003-2004, .:. kernelpanic.pl .:.</div><div class="clear"><hr></hr></div></div></body></html>

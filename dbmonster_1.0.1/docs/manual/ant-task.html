@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>DBMonster - The DBMonster User's Guide - Ant Task for dbMonster</title><style type="text/css" media="all">
+          @import url("../style/maven-base.css");
+          
+			    @import url("../style/maven-theme.css");</style><link rel="stylesheet" href="../style/print.css" type="text/css" media="print"></link><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="author" content="Piotr Maj"></meta><meta name="email" content="ant@kernelpanic.pl"></meta></head><body class="composite"><div id="banner"><a href="http://dbmonster.kernelpanic.pl/" id="projectLogo"><img alt="dbMonster" src="../gfx/dbmonster-logo.png"></img></a><div class="clear"><hr></hr></div></div><div id="breadcrumbs"><div class="xleft">
+                	Last published: 25 05 2004 22:57 CEST
+                  | Doc for 1.0.1</div><div class="xright"></div><div class="clear"><hr></hr></div></div><div id="leftColumn"><div id="navcolumn"><div id="menuOverview"><h5>Overview</h5><ul><li class="none"><a href="../news.html">What's new?</a></li><li class="none"><a href="../downloads.html">Downloads</a></li><li class="expanded"><a href="../manual/index.html">Manual</a></li><li class="none"><a href="../manual/intro.html">Introduction</a></li><li class="none"><a href="../manual/install.html">Instalation</a></li><li class="none"><a href="../manual/config-running.html">Configuration</a></li><li class="none"><strong><a href="../manual/ant-task.html">Ant task</a></strong></li><li class="none"><a href="../manual/key-generators.html">Key generators</a></li><li class="collapsed"><a href="../manual/data-generators.html">Data generators</a></li><li class="none"><a href="../faq.html">FAQ</a></li><li class="none"><a href="../resources.html">Resources</a></li></ul></div><div id="search"><h5>Search dbMonster</h5><form action="http://www.google.com/search" method="get"><a href="http://www.google.com" class="navlink"><img height="32" width="75" alt="Google" src="http://www.google.com/logos/Logo_25wht.gif"></img></a><input name="q" maxlength="255" size="15" type="text" value="" id="q"></input><input name="btnG" type="submit" value="Go" id="btnG"></input><input name="domains" type="hidden" value="http://dbmonster.kernelpanic.pl"></input><input name="sitesearch" type="hidden" value="http://dbmonster.kernelpanic.pl" id="search"></input></form></div><div id="menuProject_Documentation"><h5>Project Documentation</h5><ul><li class="none"><a href="../index.html">About dbMonster</a></li><li class="collapsed"><a href="../project-info.html">Project Info</a></li><li class="collapsed"><a href="../maven-reports.html">Project Reports</a></li><li class="none"><a href="http://maven.apache.org/development-process.html">Development Process</a></li></ul></div><a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy"><img alt="Built by Maven" src="../images/logos/maven-button-1.png"></img></a></div></div><div id="bodyColumn"><div class="contentBox"><div class="section"><h2><a name="Overview">Overview</a></h2><p>
+  An ant task for dbMonster is available. You may download it from 
+  <a href="http://sourceforge.net/projects/dbmonster">sourceforge download site</a>.
+  It works with Ant 1.6.1 and probably some eariel versions.
+</p></div><div class="section"><h2><a name="Configuration">Configuration</a></h2><p>
+Setup is quite easy. First of all get the latest dbmonster-core distribution
+and unpack it somewhere, for example: /var/java/dbmonster-core.<br></br>
+Download dbmonster-ant.jar and copy it somewhere, for example: /var/java/dbmonster-ant
+<br></br><br></br>
+Add the following entries to your build.properties:
+</p>
+    <div class="source"><pre>
+dbmonster.home=/var/java/dbmonster-core
+dbmonster.ant=/var/java/dbmonster-ant
+</pre></div>
+  <p>
+Now we have to tell ant about new task:
+</p>
+    <div class="source"><pre>
+&lt;project name="dbmonster task example" default="gendb" basedir="."&gt;
+
+  &lt;property file="build.properties"/&gt;
+
+  &lt;!-- setup classpath --&gt;
+  &lt;path id="dbmonster.classpath"&gt;
+    &lt;fileset dir="${dbmonster.ant}"&gt;
+      &lt;include name="*.jar"/&gt;
+    &lt;/fileset&gt;
+    &lt;fileset dir="${dbmonster.home}"&gt;
+      &lt;include name="**/*.jar"/&gt;
+    &lt;/fileset&gt;
+  &lt;/path&gt;
+
+  &lt;taskdef
+    name="dbmonster"
+    classname="pl.kernelpanic.dbmonster.ant.DBMonsterTask"
+    classpathref="dbmonster.classpath"&gt;
+  &lt;/taskdef&gt;
+
+  &lt;target name="gendb"&gt;
+    &lt;dbmonster
+      config="${path.to.dbmonster.config.dir}/dbmonster.properties"
+      prescript="${path.to.dbmonster.config.dir}/prescript.sql"
+      postscript="${path.to.dbmonster.config.dir}/postscript.sql"
+      verbose="true"&gt;
+      &lt;fileset dir="${path.to.dbmonster.schemas.dir}"&gt;
+        &lt;include name="*.xml"/&gt;
+      &lt;/fileset&gt;      
+    &lt;/dbmonster&gt;
+  &lt;/target&gt;
+&lt;/project&gt;
+</pre></div>
+  <p>
+If you have only ine schema file you can user schema attribute instead of
+nested fileset.
+<br></br><br></br>
+That's it. Type 'ant' now to check your setup. If you want to see what
+is going on inside type 'ant -v'.
+</p></div><div class="section"><h2><a name="Task_parameters">Task parameters</a></h2><table class="bodyTable"><thead><tr class="a"><th>Parameter</th><th>Description</th></tr></thead><tr class="b"><td>config</td><td>path to configuration file</td></tr><tr class="a"><td>schema</td><td>path to schema file if there is only one schema file, <b>if there
+           is more schema file a nested fileset should be used instead</b></td></tr><tr class="b"><td>prescript</td><td>path to the SQL script (text file with one query per line) which
+           will be executed just before dbMonster starts data generation process</td></tr><tr class="a"><td>postscript</td><td>path to the SQL script (text file with one query per line) which
+           will be executed immediately after dbMonster finished data generation process</td></tr><tr class="b"><td>progressmonitor</td><td>Fully qualified class name of progress monitor class.</td></tr><tr class="a"><td>verbose</td><td>if the progressmonitor parameter was not set a default progress
+           monitor can be used. To turn it on set verbose parameter to <code>true</code></td></tr></table></div></div></div><div class="clear"><hr></hr></div><div id="footer"><div class="xright">© 2003-2004, .:. kernelpanic.pl .:.</div><div class="clear"><hr></hr></div></div></body></html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>DBMonster - Frequently Asked Questions</title><style type="text/css" media="all">
+          @import url("./style/maven-base.css");
+          
+			    @import url("./style/maven-theme.css");</style><link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta></head><body class="composite"><div id="banner"><a href="http://dbmonster.kernelpanic.pl/" id="projectLogo"><img alt="dbMonster" src="./gfx/dbmonster-logo.png"></img></a><div class="clear"><hr></hr></div></div><div id="breadcrumbs"><div class="xleft">
+                	Last published: 25 05 2004 22:57 CEST
+                  | Doc for 1.0.1</div><div class="xright"></div><div class="clear"><hr></hr></div></div><div id="leftColumn"><div id="navcolumn"><div id="menuOverview"><h5>Overview</h5><ul><li class="none"><a href="news.html">What's new?</a></li><li class="none"><a href="downloads.html">Downloads</a></li><li class="collapsed"><a href="manual/index.html">Manual</a></li><li class="none"><strong><a href="faq.html">FAQ</a></strong></li><li class="none"><a href="resources.html">Resources</a></li></ul></div><div id="search"><h5>Search dbMonster</h5><form action="http://www.google.com/search" method="get"><a href="http://www.google.com" class="navlink"><img height="32" width="75" alt="Google" src="http://www.google.com/logos/Logo_25wht.gif"></img></a><input name="q" maxlength="255" size="15" type="text" value="" id="q"></input><input name="btnG" type="submit" value="Go" id="btnG"></input><input name="domains" type="hidden" value="http://dbmonster.kernelpanic.pl"></input><input name="sitesearch" type="hidden" value="http://dbmonster.kernelpanic.pl" id="search"></input></form></div><div id="menuProject_Documentation"><h5>Project Documentation</h5><ul><li class="none"><a href="index.html">About dbMonster</a></li><li class="collapsed"><a href="project-info.html">Project Info</a></li><li class="collapsed"><a href="maven-reports.html">Project Reports</a></li><li class="none"><a href="http://maven.apache.org/development-process.html">Development Process</a></li></ul></div><a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy"><img alt="Built by Maven" src="./images/logos/maven-button-1.png"></img></a></div></div><div id="bodyColumn"><div class="contentBox"><div class="section"><h2><a name="Frequently_Asked_Questions">Frequently Asked Questions</a></h2><p><strong>Running dbMonster</strong></p><ol><li><a href="#verbose">
+        How to force dbMonster to be more verbose?
+      </a></li><li><a href="#schema">
+        I tried SchemaGrabber with Oracle and it grabbed all tables including
+        the system tables? Are schemas supported?
+      </a></li></ol></div><div class="section"><h2><a name="Running_dbMonster">Running dbMonster</a></h2><dl><dt><a name="verbose">
+        How to force dbMonster to be more verbose?
+      </a></dt><dd>
+        <ol>
+          <li>Unpack dbmonster-VERSION.jar,</li>
+          <li>edit log4j.properties to adjust it for your needs,</li>
+          <li>repack the jar,</li>
+          <li>rerun dbMonster.</li>
+        </ol>
+        dbMonster uses Log4j for logging. The documentation may be found
+        <a href="http://jakarta.apache.org/log4j/docs/documentation.html">here</a>.
+        Be careful: setting all log levels to DEBUG will produce 
+        _a_lot_ of more or less helpful messages.
+      </dd></dl><dl><dt><a name="schema">
+        I tried SchemaGrabber with Oracle and it grabbed all tables including
+        the system tables? Are schemas supported?
+      </a></dt><dd>
+		Yes. To grab only tables from one schema you must add 
+		<code>dbmonster.jdbc.schema=schema_name</code> property to the configuration
+		file.<br></br><br></br>
+		You may use schema in the configuration file (just rename your table name to
+		schema_name.table_name) but be careful with generators which rely on this table:
+		in other words if you name your table MYSCHEMA.MYTABLE you must use this full 
+		name i.e. in ForeignKeyGenerator.<br></br><br></br>
+		It is a good habit to always use schemas with schema-enabled databases and not to use
+		schema part of the table name on other databases.
+      </dd></dl></div></div></div><div class="clear"><hr></hr></div><div id="footer"><div class="xright">© 2003-2004, .:. kernelpanic.pl .:.</div><div class="clear"><hr></hr></div></div></body></html>

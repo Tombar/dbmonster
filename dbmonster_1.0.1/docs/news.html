@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>DBMonster - The DBMonster home page - What's new</title><style type="text/css" media="all">
+          @import url("./style/maven-base.css");
+          
+			    @import url("./style/maven-theme.css");</style><link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="author" content="Piotr Maj"></meta><meta name="email"></meta></head><body class="composite"><div id="banner"><a href="http://dbmonster.kernelpanic.pl/" id="projectLogo"><img alt="dbMonster" src="./gfx/dbmonster-logo.png"></img></a><div class="clear"><hr></hr></div></div><div id="breadcrumbs"><div class="xleft">
+                	Last published: 25 05 2004 22:57 CEST
+                  | Doc for 1.0.1</div><div class="xright"></div><div class="clear"><hr></hr></div></div><div id="leftColumn"><div id="navcolumn"><div id="menuOverview"><h5>Overview</h5><ul><li class="none"><strong><a href="news.html">What's new?</a></strong></li><li class="none"><a href="downloads.html">Downloads</a></li><li class="collapsed"><a href="manual/index.html">Manual</a></li><li class="none"><a href="faq.html">FAQ</a></li><li class="none"><a href="resources.html">Resources</a></li></ul></div><div id="search"><h5>Search dbMonster</h5><form action="http://www.google.com/search" method="get"><a href="http://www.google.com" class="navlink"><img height="32" width="75" alt="Google" src="http://www.google.com/logos/Logo_25wht.gif"></img></a><input name="q" maxlength="255" size="15" type="text" value="" id="q"></input><input name="btnG" type="submit" value="Go" id="btnG"></input><input name="domains" type="hidden" value="http://dbmonster.kernelpanic.pl"></input><input name="sitesearch" type="hidden" value="http://dbmonster.kernelpanic.pl" id="search"></input></form></div><div id="menuProject_Documentation"><h5>Project Documentation</h5><ul><li class="none"><a href="index.html">About dbMonster</a></li><li class="collapsed"><a href="project-info.html">Project Info</a></li><li class="collapsed"><a href="maven-reports.html">Project Reports</a></li><li class="none"><a href="http://maven.apache.org/development-process.html">Development Process</a></li></ul></div><a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy"><img alt="Built by Maven" src="./images/logos/maven-button-1.png"></img></a></div></div><div id="bodyColumn"><div class="contentBox"><div class="section"><h2><a name="What&apos;s_new_">What's new?</a></h2><div class="subsection"><h3><a name="2004-05-25">2004-05-25</a></h3><p>
+       Quick fix release 1.0.1. There is an silly bug in dbmonster-core-1.0:
+       sql pre- and post scripts execute only dbMonster runs from ant-task :-)
+       I've also added ConstantGenerator and an experimental feature
+       of automatic SQL type recognition fro columns. This should fix
+       the problem with NULL values on Oracle, but introduces a 
+       potential new problem. Correct SQL type recognition works only
+       if you use the same column name in the schema file as database
+       returns it, so dbmonster-1.0.1 is very case sensitive.
+       Always use the same case in column names as your JDBC driver.
+    </p></div><div class="subsection"><h3><a name="2004-05-22">2004-05-22</a></h3><p>
+       Great changes time. First of all dbmonster is now divided into a couple of
+       subproject: dbmonster-core, dbmonster-ant. dbmonster-core is the framework
+       and standalone console application. All other subprojects depends on it.
+       <br></br><br></br>
+       Some new features were added:
+       <ul>
+         <li>executing a script of user's choise before and after data generation
+             (-f and -l command line switches),</li>
+         <li>user can now register her/his own ProgressMonitor class by setting
+             property in configuration file</li>
+       </ul>
+       Some bugs were fixed.
+    </p></div><div class="subsection"><h3><a name="2003-12-23">2003-12-23</a></h3><p>
+       DBMonster 1.0-beta4 released.
+    </p></div><div class="subsection"><h3><a name="2003-11-07">2003-11-07</a></h3><p>
+       DBMonster 1.0-beta3 released.
+    </p></div><div class="subsection"><h3><a name="2003-10-13">2003-10-13</a></h3><p>
+       DBMonster 1.0-beta2 released.
+    </p></div><div class="subsection"><h3><a name="2003-10-08">2003-10-08</a></h3><p>
+    DBMonster 1.0-beta1 released.
+    </p></div><div class="subsection"><h3><a name="2003-08-29">2003-08-29</a></h3><p>
+       Refactoring. DBMonster now uses <a href="http://maven.apache.org/index.html">Maven</a>
+       as a build system.
+    </p></div><div class="subsection"><h3><a name="2003-08-28">2003-08-28</a></h3><p>
+      There is now DBMonster Maven plugin available. Check <a href="downloads.html">download</a>
+      section and <a href="http://dbmonster.kernelpanic.pl/maven/index.html">plugin home page</a>.
+    </p></div><div class="subsection"><h3><a name="2003-08-05">2003-08-05</a></h3><p>
+        DBMonster v.0.3.5 released - updated manual added XDoclet task (as a separate module).
+      </p></div><div class="subsection"><h3><a name="2003-05-27">2003-05-27</a></h3><p>
+        DBMonster v.0.3.4 released - this release is focused on running DBMonster on MS Windows - now it should run smooth.
+      </p></div><div class="subsection"><h3><a name="2003-05-08">2003-05-08</a></h3><p>
+        DBMonster v.0.3.3 released - code cleanups and one new feature (optional key generation).
+      </p></div><div class="subsection"><h3><a name="2003-05-01">2003-05-01</a></h3><p>
+        DBMonster v.0.3.2 released - SchemaGrabber works now again ;).
+      </p></div><div class="subsection"><h3><a name="2003-04-26">2003-04-26</a></h3><p>
+        DBMonster v.0.3.1 released - buxfixes and one new feature.
+      </p></div><div class="subsection"><h3><a name="2003-04-06">2003-04-06</a></h3><p>
+        DBMonster v.0.3 released - enjoy!.
+      </p></div><div class="subsection"><h3><a name="2003-03-29">2003-03-29</a></h3><p>
+        Changed generators register. Now the generator registers itself providing
+	        its short name and default SQL type. It is done by kind of "dirty hack" 
+	        that reads all directories and jars on CLASSPATH and searches for class 
+	        names which "Generator" suffix. The generator classes may contain static
+	        registration code.
+      </p></div><div class="subsection"><h3><a name="2003-03-26">2003-03-26</a></h3><p>
+        There is 
+	        <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/dbmonster/dbmonster/contrib/">
+	        new sub-module in CVS repository</a> called "contrib". 
+	        I put there classes that may be useful in some circumstances.
+	        Currently there are one key generator for PostgreSQL that uses
+	        sequences and one data generator - EmailGenerator. There is no 
+	        build system for contrib directory yet, so use your favourite
+	        IDE to build the classes.
+      </p></div><div class="subsection"><h3><a name="2003-03-24">2003-03-24</a></h3><p>
+        New dictionary was added (polish first names). Dictionaries should 
+	        now be stored in UTF-8 encoding.
+      </p></div><div class="subsection"><h3><a name="2003-03-20">2003-03-20</a></h3><p>
+        v.0.2.2 released.
+      </p></div><div class="subsection"><h3><a name="2003-03-18">2003-03-18</a></h3><p>
+        DateTimeGenerator can now produce random time and random date. 
+	        It seems that DBMonster can now deal with all datatypes apart from 
+	        BLOBs. Now test it, test it, and once more test it!
+      </p></div><div class="subsection"><h3><a name="2003-03-17">2003-03-17</a></h3><p>
+        DBMonster has new generator - DictionaryGenerator - which allows
+	        to define custom sources of data for columns. See 
+	        <a href="manual/data-generators.html#dictionary">manual</a>
+	        for details.
+      </p></div><div class="subsection"><h3><a name="2003-03-15">2003-03-15</a></h3><p>
+        Version 0.2.1 of DBMonster is out. Repairs horrible 
+	        bug in ForeinKeyGenerator. <a href="downloads.html">Upgrade recommended</a>.
+	  
+      </p></div><div class="subsection"><h3><a name="2003-03-14">2003-03-14</a></h3><p>
+        Version 0.2 of DBMonster is out. A lot of changes - 
+	        <a href="downloads.html">try it out</a>.
+      </p></div><div class="subsection"><h3><a name="2003-03-13">2003-03-13</a></h3><p>
+        Launching new web site - simple but I hope useful. Logotype by 
+	        <a href="http://monochrome.gate.pl/">jarvis</a>. Thanks!
+      </p></div><div class="subsection"><h3><a name="2003-03-07">2003-03-07</a></h3><p>
+        DBMonster 0.1 - Proof of Concept release is out.
+      </p></div><div class="subsection"><h3><a name="2003-02-02">2003-02-02</a></h3><p>
+        Started project at <a href="http://sourceforge.net/">sourceforge.net</a>.
+      </p></div></div></div></div><div class="clear"><hr></hr></div><div id="footer"><div class="xright">© 2003-2004, .:. kernelpanic.pl .:.</div><div class="clear"><hr></hr></div></div></body></html>

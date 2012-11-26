@@ -1,0 +1,6 @@
+pl.kernelpanic.dbmonster
+pl.kernelpanic.dbmonster.connection
+pl.kernelpanic.dbmonster.generator
+pl.kernelpanic.dbmonster.schema
+pl.kernelpanic.dbmonster.sql
+pl.kernelpanic.dbmonster.util

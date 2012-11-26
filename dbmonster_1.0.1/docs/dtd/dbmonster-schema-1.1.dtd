@@ -1,0 +1,93 @@
+<!--
+    DTD for DBMonster database schema mapping, version 1.1
+    
+    $Id: dbmonster-schema-1.1.dtd,v 1.3 2003/09/20 06:48:27 majek Exp $
+-->
+
+<!ENTITY % Boolean "(true|false)">
+<!ENTITY % ClassName "CDATA">
+
+<!--
+    The top level element contains all other elements
+-->
+<!ELEMENT dbmonster-schema (name, table+)>
+
+<!ELEMENT name (#PCDATA)>
+
+<!--
+    The table element describes a SQL table and have the following 
+    attributes:
+
+        name     the name of the table (REQUIRED)
+
+        rows     number of random rows to generate (default: 0)
+
+-->
+<!ELEMENT table (key?, column*)>
+<!ATTLIST table  name        CDATA       #REQUIRED>
+<!ATTLIST table  rows        CDATA       #REQUIRED>
+
+<!-- 
+   The "key" element contains one attributes and has one 
+   nested element - a generator
+   
+      databaseDefault 
+                if true the key will not be added to the schema
+                letting the database to set the default value for 
+                that key; this attribute is useful for such fields
+                as SERIAL columns in PostgreSQL or AUTO_INCREMENT
+                in MySQL.
+-->
+<!ELEMENT key (generator)>
+<!ATTLIST key    databaseDefault CDATA       #IMPLIED>
+
+<!--
+   The "column" element describes a SQL column and have the following
+   attributes:
+   
+       name     the name of the column (REQUIRED)
+
+       databaseDefault 
+                if true the column will not be added to the schema
+                letting the database to set the default value for 
+                the column
+-->
+<!ELEMENT column (generator?)>
+<!ATTLIST column    name            CDATA       #REQUIRED>
+<!ATTLIST column    databaseDefault CDATA       #IMPLIED>
+
+<!--
+   The "generator" element may be used inside both column and key
+   elements. Generator has only one attribute:
+   
+       type     the fully qualified class name of the generator
+                or it's short name.
+-->
+<!ELEMENT generator (property*)>
+<!ATTLIST generator    type        CDATA       #REQUIRED>
+
+<!--
+   The "property" element may be nested in generator element.
+   It allows to pass the configuration variables to the generator.
+   
+       name      the "name" attribute should contain a name of the 
+                 variable. It will be passed as a "setter" method.
+      
+       value     the "value" passed to the method defined in "name".
+       
+       For example:
+       
+       	  for the following property entry:
+       	    
+           <property name="maxValue" value="100"/>
+       
+          the following code should be added to the generator:
+          
+            public Long getMaxValue() {}
+            public void setMaxValue( Long value ) {}
+                 
+-->
+<!ELEMENT property EMPTY>
+<!ATTLIST property   name        CDATA       #REQUIRED>
+<!ATTLIST property   value       CDATA       #REQUIRED>
+

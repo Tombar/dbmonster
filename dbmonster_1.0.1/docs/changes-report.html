@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>DBMonster - Changes</title><style type="text/css" media="all">
+          @import url("./style/maven-base.css");
+          
+			    @import url("./style/maven-theme.css");</style><link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="author" content="Piotr Maj"></meta><meta name="email" content="piotr.maj@kernelpanic.pl"></meta></head><body class="composite"><div id="banner"><a href="http://dbmonster.kernelpanic.pl/" id="projectLogo"><img alt="dbMonster" src="./gfx/dbmonster-logo.png"></img></a><div class="clear"><hr></hr></div></div><div id="breadcrumbs"><div class="xleft">
+                	Last published: 25 05 2004 22:57 CEST
+                  | Doc for 1.0.1</div><div class="xright"></div><div class="clear"><hr></hr></div></div><div id="leftColumn"><div id="navcolumn"><div id="menuOverview"><h5>Overview</h5><ul><li class="none"><a href="news.html">What's new?</a></li><li class="none"><a href="downloads.html">Downloads</a></li><li class="collapsed"><a href="manual/index.html">Manual</a></li><li class="none"><a href="faq.html">FAQ</a></li><li class="none"><a href="resources.html">Resources</a></li></ul></div><div id="search"><h5>Search dbMonster</h5><form action="http://www.google.com/search" method="get"><a href="http://www.google.com" class="navlink"><img height="32" width="75" alt="Google" src="http://www.google.com/logos/Logo_25wht.gif"></img></a><input name="q" maxlength="255" size="15" type="text" value="" id="q"></input><input name="btnG" type="submit" value="Go" id="btnG"></input><input name="domains" type="hidden" value="http://dbmonster.kernelpanic.pl"></input><input name="sitesearch" type="hidden" value="http://dbmonster.kernelpanic.pl" id="search"></input></form></div><div id="menuProject_Documentation"><h5>Project Documentation</h5><ul><li class="none"><a href="index.html">About dbMonster</a></li><li class="collapsed"><a href="project-info.html">Project Info</a></li><li class="expanded"><a href="maven-reports.html">Project Reports</a></li><li class="none"><a href="jdepend-report.html">Metrics</a></li><li class="none"><a href="checkstyle-report.html">Checkstyle</a></li><li class="none"><strong><a href="changes-report.html">Changes</a></strong></li><li class="none"><a href="license.html">Project License</a></li><li class="none"><a href="apidocs/index.html">JavaDocs</a></li><li class="none"><a href="javadoc.html">JavaDoc Report</a></li><li class="none"><a href="xref/index.html">Source Xref</a></li><li class="none"><a href="xref-test/index.html">Test Xref</a></li><li class="none"><a href="junit-report.html">Unit Tests</a></li><li class="none"><a href="task-list.html">Task List</a></li><li class="none"><a href="pmd-report.html">PMD Report</a></li><li class="none"><a href="cpd-report.html">CPD Report</a></li><li class="none"><a href="http://maven.apache.org/development-process.html">Development Process</a></li></ul></div><a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy"><img alt="Built by Maven" src="./images/logos/maven-button-1.png"></img></a></div></div><div id="bodyColumn"><div class="contentBox"><div class="section"><h2><a name="Release_History">Release History</a></h2><table class="bodyTable"><tr class="a"><th style="width:50px">Version</th><th>Date</th><th>Description</th></tr><tr class="b"><td>
+            <a href="#v1_0-beta4">v1.0-beta4</a>
+          </td><td>2003-12-20</td><td>
+          </td></tr><tr class="a"><td>
+            <a href="#v1_0-beta3">v1.0-beta3</a>
+          </td><td>2003-11-07</td><td>
+          </td></tr><tr class="b"><td>
+            <a href="#v1_0-beta2">v1.0-beta2</a>
+          </td><td>2003-10-13</td><td>
+          </td></tr><tr class="a"><td>
+            <a href="#v1_0-beta1">v1.0-beta1</a>
+          </td><td>2003-10-09</td><td>
+          </td></tr><tr class="b"><td>
+            <a href="#v0_3_5">v0.3.5</a>
+          </td><td>2003-08-05</td><td>
+          </td></tr><tr class="a"><td>
+            <a href="#v_0_3_4">v.0.3.4</a>
+          </td><td>2003-05-27</td><td>
+          </td></tr><tr class="b"><td>
+            <a href="#v_0_3_3">v.0.3.3</a>
+          </td><td>2003-05-08</td><td>
+          </td></tr><tr class="a"><td>
+            <a href="#v_0_3_2">v.0.3.2</a>
+          </td><td>2003-05-01</td><td>
+          </td></tr><tr class="b"><td>
+            <a href="#v_0_3_1">v.0.3.1</a>
+          </td><td>2003-04-26</td><td>
+          </td></tr><tr class="a"><td>
+            <a href="#v_0_3">v.0.3</a>
+          </td><td>2003-04-06</td><td>
+          </td></tr><tr class="b"><td>
+            <a href="#v_0_2_2">v.0.2.2</a>
+          </td><td>2003-03-20</td><td>
+          </td></tr><tr class="a"><td>
+            <a href="#v_0_2_1">v.0.2.1</a>
+          </td><td>2003-03-15</td><td>
+          </td></tr><tr class="b"><td>
+            <a href="#v_0_2">v.0.2</a>
+          </td><td>2003-03-14</td><td>
+          </td></tr><tr class="a"><td>
+            <a href="#v_0_1">v.0.1</a>
+          </td><td>2003-03-07</td><td>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v1_0-beta4_-_2003-12-20">Release v1.0-beta4 - 2003-12-20</a></h2><a name="v1.0-beta4">
+      </a><table class="bodyTable"><tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="a"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>Applied patch #852679 sent by Antonio Petrelli on 2003-12-02.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>Added schema support (thanks to Michael Wall for the report).</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>Fixed counter (thanks to Michael Wall for the report).</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>Added start script for *NIX.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>Added jUnit tests for MySQL, PostgreSQL and Firebird.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v1_0-beta3_-_2003-11-07">Release v1.0-beta3 - 2003-11-07</a></h2><a name="v1.0-beta3">
+      </a><table class="bodyTable"><tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="a"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>Fixed autocommit issue on MySQL (thanks to Vic Vec).</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v1_0-beta2_-_2003-10-13">Release v1.0-beta2 - 2003-10-13</a></h2><a name="v1.0-beta2">
+      </a><table class="bodyTable"><tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="a"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>Various changes.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v1_0-beta1_-_2003-10-09">Release v1.0-beta1 - 2003-10-09</a></h2><a name="v1.0-beta1">
+      </a><table class="bodyTable"><tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="a"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>First public beta of DBMonster 1.0 with GUI.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v0_3_5_-_2003-08-05">Release v0.3.5 - 2003-08-05</a></h2><a name="v0.3.5">
+      </a><table class="bodyTable"><tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="a"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>Abandoned own FilterIterator in favour of Jakarta Collections one.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>Updated docs on DBMonster-Xdoclet integration.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v_0_3_4_-_2003-05-27">Release v.0.3.4 - 2003-05-27</a></h2><a name="v.0.3.4">
+      </a><table class="bodyTable"><tr class="a"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="b"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>Fixed home directory path resolving in SchemaReader.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>Batch files for Windows - running DBMosnter on Windows is now almost as easy as on Linux ;)</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v_0_3_3_-_2003-05-08">Release v.0.3.3 - 2003-05-08</a></h2><a name="v.0.3.3">
+      </a><table class="bodyTable"><tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="a"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>Keys may be now marked as database default values. It results in skipping the key during parsing schema file. It is useful when AUTO_INCREMENT/SERIAL columns are also PRIMARY KEYS for tables.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>Configuration parsing is now kept in one place.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v_0_3_2_-_2003-05-01">Release v.0.3.2 - 2003-05-01</a></h2><a name="v.0.3.2">
+      </a><table class="bodyTable"><tr class="a"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="b"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>Nullpointer in SchemaGrabber.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v_0_3_1_-_2003-04-26">Release v.0.3.1 - 2003-04-26</a></h2><a name="v.0.3.1">
+      </a><table class="bodyTable"><tr class="a"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="b"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>BUG #724815, dictionaries relative paths are now calculated from the directory where the schema file is located [bug was reported by dominic.chambers -AT- telefonica.net ]</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>BUG #724757, schema case sensitivity problem, DBMonster should now work fine with case sensitive databases, you need to set one mode parameter in the config file [bug was reported by dominic.chambers -AT- telefonica.net ]</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>RFE #725280 - scheam file now allows to mark column as database default column. Such column will not be included in the schema letting the database to set default value for it. [rfe proposed by dominic.chambers -AT- telefonica.net ]</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v_0_3_-_2003-04-06">Release v.0.3 - 2003-04-06</a></h2><a name="v.0.3">
+      </a><table class="bodyTable"><tr class="a"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="b"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>schema is now case insensitive (all table and column names are changed to lower case)</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>DBMonster now uses PreparedStatements instead of Statements whereever in may have significantinfluence on speed</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>fastMode feature added to ForeignKeyGenereator</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>added new dictionary - polish first names [1455 items ]</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>added automatic generators registration</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>added new command line switch which allows to show the list of all registered generators that were found on CLASSPATH (-l, --list-generators)</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v_0_2_2_-_2003-03-20">Release v.0.2.2 - 2003-03-20</a></h2><a name="v.0.2.2">
+      </a><table class="bodyTable"><tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="a"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>fixed bug in parsing values in BooleanGenerator</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>DBMonster now escapes ' with \'</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>added DictionaryGenerator</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>added optional logging of all SQL statements (for developers)</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v_0_2_1_-_2003-03-15">Release v.0.2.1 - 2003-03-15</a></h2><a name="v.0.2.1">
+      </a><table class="bodyTable"><tr class="a"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="b"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>fixed major bug in ForeignKeyGenerator. Now it should work fine.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v_0_2_-_2003-03-14">Release v.0.2 - 2003-03-14</a></h2><a name="v.0.2">
+      </a><table class="bodyTable"><tr class="a"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>major redesing - every schema element and generators imlpement now the same interface which consists of three basic methods:
+            <ul>
+              <li>init() - called just after object is created</li>
+              <li>validate() - checks all preconditions</li>
+              <li>generate() - generates schema item or value for column</li>
+            </ul>
+          </td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>SchemaGrabber now recognizes primary key columns.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>Fixed null poiters in generators factories.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="fix" src="images/fix.gif"></img>
+          </td><td>Lots of code clean ups.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>Sample log4j config file added.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>DBMonster checks for duplicated column names in tables.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>DBMonster issues validation queries for all tables before starting to work.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>Key and data generators have now similar interfaces and the same entry in schema file.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>Short tutorial on how to extend DBMonster and writing your own generators.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="a"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>More javadoc.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>New website launched.</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div><div class="section"><h2><a name="Release_v_0_1_-_2003-03-07">Release v.0.1 - 2003-03-07</a></h2><a name="v.0.1">
+      </a><table class="bodyTable"><tr class="a"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr><tr class="b"><td>
+            <img alt="add" src="images/add.gif"></img>
+          </td><td>Proof of Concept * initial version</td><td>
+            <a href="team-list.html#majek">majek</a>
+          </td></tr></table></div></div></div><div class="clear"><hr></hr></div><div id="footer"><div class="xright">© 2003-2004, .:. kernelpanic.pl .:.</div><div class="clear"><hr></hr></div></div></body></html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>DBMonster - JDepend Source Code Analysis</title><style type="text/css" media="all">
+          @import url("./style/maven-base.css");
+          
+			    @import url("./style/maven-theme.css");</style><link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><style type="text/css">.jdepend td ul, .jdepend td ul li { margin:0; padding:0; list-style-type: none; }</style></head><body class="jdepend"><div id="banner"><a href="http://dbmonster.kernelpanic.pl/" id="projectLogo"><img alt="dbMonster" src="./gfx/dbmonster-logo.png"></img></a><div class="clear"><hr></hr></div></div><div id="breadcrumbs"><div class="xleft">
+                	Last published: 25 05 2004 22:57 CEST
+                  | Doc for 1.0.1</div><div class="xright"></div><div class="clear"><hr></hr></div></div><div id="leftColumn"><div id="navcolumn"><div id="menuOverview"><h5>Overview</h5><ul><li class="none"><a href="news.html">What's new?</a></li><li class="none"><a href="downloads.html">Downloads</a></li><li class="collapsed"><a href="manual/index.html">Manual</a></li><li class="none"><a href="faq.html">FAQ</a></li><li class="none"><a href="resources.html">Resources</a></li></ul></div><div id="search"><h5>Search dbMonster</h5><form action="http://www.google.com/search" method="get"><a href="http://www.google.com" class="navlink"><img height="32" width="75" alt="Google" src="http://www.google.com/logos/Logo_25wht.gif"></img></a><input name="q" maxlength="255" size="15" type="text" value="" id="q"></input><input name="btnG" type="submit" value="Go" id="btnG"></input><input name="domains" type="hidden" value="http://dbmonster.kernelpanic.pl"></input><input name="sitesearch" type="hidden" value="http://dbmonster.kernelpanic.pl" id="search"></input></form></div><div id="menuProject_Documentation"><h5>Project Documentation</h5><ul><li class="none"><a href="index.html">About dbMonster</a></li><li class="collapsed"><a href="project-info.html">Project Info</a></li><li class="expanded"><a href="maven-reports.html">Project Reports</a></li><li class="none"><strong><a href="jdepend-report.html">Metrics</a></strong></li><li class="none"><a href="checkstyle-report.html">Checkstyle</a></li><li class="none"><a href="changes-report.html">Changes</a></li><li class="none"><a href="license.html">Project License</a></li><li class="none"><a href="apidocs/index.html">JavaDocs</a></li><li class="none"><a href="javadoc.html">JavaDoc Report</a></li><li class="none"><a href="xref/index.html">Source Xref</a></li><li class="none"><a href="xref-test/index.html">Test Xref</a></li><li class="none"><a href="junit-report.html">Unit Tests</a></li><li class="none"><a href="task-list.html">Task List</a></li><li class="none"><a href="pmd-report.html">PMD Report</a></li><li class="none"><a href="cpd-report.html">CPD Report</a></li><li class="none"><a href="http://maven.apache.org/development-process.html">Development Process</a></li></ul></div><a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy"><img alt="Built by Maven" src="./images/logos/maven-button-1.png"></img></a></div></div><div id="bodyColumn"><div class="contentBox"><div class="section"><h2><a name="Metric_Results">Metric Results</a></h2><p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Packages">packages</a>] [
+        <a href="#Cycles">cycles</a>] [
+        <a href="#Explanations">explanations</a>]</p><p>The following document contains the results of a
+        <a href="http://www.clarkware.com/software/JDepend.html">JDepend</a>metric analysis. The various metrics are defined at the bottom of this document.</p></div><div class="section"><h2><a name="Summary">Summary</a></h2><p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Packages">packages</a>] [
+        <a href="#Cycles">cycles</a>] [
+        <a href="#Explanations">explanations</a>]</p><table class="bodyTable"><thead>
+          <tr class="a"><th title="Package">Package</th><th style="text-align:right">
+              <acronym title="Total Classes">TC</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Abstract Classes">AC</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Concrete Classes">CC</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Afferent Couplings">AC</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Efferent Couplings">EC</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Abstractness">A</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Instability">I</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Distance">D</acronym>
+            </th></tr>
+        </thead><tbody>
+          <tr class="b"><td>
+              <a href="#pl_kernelpanic_dbmonster">pl.kernelpanic.dbmonster</a>
+            </td><td style="text-align:right">9</td><td style="text-align:right">1</td><td style="text-align:right">8</td><td style="text-align:right">2</td><td style="text-align:right">13</td><td style="text-align:right">0,11</td><td style="text-align:right">87%</td><td style="text-align:right">2%</td></tr>
+          <tr class="a"><td>
+              <a href="#pl_kernelpanic_dbmonster_connection">pl.kernelpanic.dbmonster.connection</a>
+            </td><td style="text-align:right">5</td><td style="text-align:right">2</td><td style="text-align:right">3</td><td style="text-align:right">3</td><td style="text-align:right">8</td><td style="text-align:right">0,4</td><td style="text-align:right">73%</td><td style="text-align:right">13%</td></tr>
+          <tr class="b"><td>
+              <a href="#pl_kernelpanic_dbmonster_generator">pl.kernelpanic.dbmonster.generator</a>
+            </td><td style="text-align:right">14</td><td style="text-align:right">4</td><td style="text-align:right">10</td><td style="text-align:right">2</td><td style="text-align:right">10</td><td style="text-align:right">0,29</td><td style="text-align:right">83%</td><td style="text-align:right">12%</td></tr>
+          <tr class="a"><td>
+              <a href="#pl_kernelpanic_dbmonster_schema">pl.kernelpanic.dbmonster.schema</a>
+            </td><td style="text-align:right">10</td><td style="text-align:right">0</td><td style="text-align:right">10</td><td style="text-align:right">2</td><td style="text-align:right">15</td><td style="text-align:right">0</td><td style="text-align:right">88%</td><td style="text-align:right">12%</td></tr>
+          <tr class="b"><td>
+              <a href="#pl_kernelpanic_dbmonster_sql">pl.kernelpanic.dbmonster.sql</a>
+            </td><td style="text-align:right">1</td><td style="text-align:right">0</td><td style="text-align:right">1</td><td style="text-align:right">1</td><td style="text-align:right">2</td><td style="text-align:right">0</td><td style="text-align:right">67%</td><td style="text-align:right">33%</td></tr>
+          <tr class="a"><td>
+              <a href="#pl_kernelpanic_dbmonster_util">pl.kernelpanic.dbmonster.util</a>
+            </td><td style="text-align:right">2</td><td style="text-align:right">0</td><td style="text-align:right">2</td><td style="text-align:right">2</td><td style="text-align:right">3</td><td style="text-align:right">0</td><td style="text-align:right">60%</td><td style="text-align:right">40%</td></tr>
+        </tbody></table></div><div class="section"><h2><a name="Packages">Packages</a></h2><p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Packages">packages</a>] [
+        <a href="#Cycles">cycles</a>] [
+        <a href="#Explanations">explanations</a>]</p><div class="subsection"><h3><a name="pl_kernelpanic_dbmonster">pl.kernelpanic.dbmonster</a></h3><table class="bodyTable"><thead>
+            <tr class="b"><th>Afferent Couplings</th><th>Efferent Couplings</th><th>Abstractness</th><th>Instability</th><th>Distance</th></tr>
+          </thead><tbody>
+            <tr class="a"><td>2</td><td>13</td><td>11%</td><td>87%</td><td>2%</td></tr>
+          </tbody></table><table class="bodyTable"><thead>
+            <tr class="b"><th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th></tr>
+          </thead><tbody>
+            <tr class="a"><td>
+                <ul>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/ProgressMonitor.html">ProgressMonitor</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/DBMonster.html">DBMonster</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/DBMonsterContext.html">DBMonsterContext</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/Dictionary.html">Dictionary</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/DictionaryManager.html">DictionaryManager</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/Launcher.html">Launcher</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/SchemaGrabber.html">PairBean</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/ProgressMonitorAdapter.html">ProgressMonitorAdapter</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/SchemaGrabber.html">SchemaGrabber</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_generator">pl.kernelpanic.dbmonster.generator</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_schema">pl.kernelpanic.dbmonster.schema</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#java_io">java.io</a>
+                  </li>
+                  <li>
+                    <a href="#java_lang">java.lang</a>
+                  </li>
+                  <li>
+                    <a href="#java_net">java.net</a>
+                  </li>
+                  <li>
+                    <a href="#java_sql">java.sql</a>
+                  </li>
+                  <li>
+                    <a href="#java_util">java.util</a>
+                  </li>
+                  <li>
+                    <a href="#java_util_zip">java.util.zip</a>
+                  </li>
+                  <li>
+                    <a href="#org_apache_commons_cli">org.apache.commons.cli</a>
+                  </li>
+                  <li>
+                    <a href="#org_apache_commons_logging">org.apache.commons.logging</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_connection">pl.kernelpanic.dbmonster.connection</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_generator">pl.kernelpanic.dbmonster.generator</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_schema">pl.kernelpanic.dbmonster.schema</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_sql">pl.kernelpanic.dbmonster.sql</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_util">pl.kernelpanic.dbmonster.util</a>
+                  </li>
+                </ul>
+              </td></tr>
+          </tbody></table></div><div class="subsection"><h3><a name="pl_kernelpanic_dbmonster_connection">pl.kernelpanic.dbmonster.connection</a></h3><table class="bodyTable"><thead>
+            <tr class="b"><th>Afferent Couplings</th><th>Efferent Couplings</th><th>Abstractness</th><th>Instability</th><th>Distance</th></tr>
+          </thead><tbody>
+            <tr class="a"><td>3</td><td>8</td><td>40%</td><td>73%</td><td>13%</td></tr>
+          </tbody></table><table class="bodyTable"><thead>
+            <tr class="b"><th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th></tr>
+          </thead><tbody>
+            <tr class="a"><td>
+                <ul>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/connection/ConnectionProvider.html">ConnectionProvider</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/connection/LogEnabled.html">LogEnabled</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/connection/DBCPConnectionProvider.html">DBCPConnectionProvider</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/connection/SimpleConnectionProvider.html">SimpleConnectionProvider</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/connection/Transaction.html">Transaction</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster">pl.kernelpanic.dbmonster</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_generator">pl.kernelpanic.dbmonster.generator</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_schema">pl.kernelpanic.dbmonster.schema</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#java_lang">java.lang</a>
+                  </li>
+                  <li>
+                    <a href="#java_sql">java.sql</a>
+                  </li>
+                  <li>
+                    <a href="#java_util">java.util</a>
+                  </li>
+                  <li>
+                    <a href="#javax_sql">javax.sql</a>
+                  </li>
+                  <li>
+                    <a href="#org_apache_commons_dbcp">org.apache.commons.dbcp</a>
+                  </li>
+                  <li>
+                    <a href="#org_apache_commons_logging">org.apache.commons.logging</a>
+                  </li>
+                  <li>
+                    <a href="#org_apache_commons_pool">org.apache.commons.pool</a>
+                  </li>
+                  <li>
+                    <a href="#org_apache_commons_pool_impl">org.apache.commons.pool.impl</a>
+                  </li>
+                </ul>
+              </td></tr>
+          </tbody></table></div><div class="subsection"><h3><a name="pl_kernelpanic_dbmonster_generator">pl.kernelpanic.dbmonster.generator</a></h3><table class="bodyTable"><thead>
+            <tr class="b"><th>Afferent Couplings</th><th>Efferent Couplings</th><th>Abstractness</th><th>Instability</th><th>Distance</th></tr>
+          </thead><tbody>
+            <tr class="a"><td>2</td><td>10</td><td>29%</td><td>83%</td><td>12%</td></tr>
+          </tbody></table><table class="bodyTable"><thead>
+            <tr class="b"><th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th></tr>
+          </thead><tbody>
+            <tr class="a"><td>
+                <ul>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/BasicDataGenerator.html">BasicDataGenerator</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/DataGenerator.html">DataGenerator</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/Initializable.html">Initializable</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/KeyGenerator.html">KeyGenerator</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/BooleanGenerator.html">BooleanGenerator</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/ConstantGenerator.html">ConstantGenerator</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/DateTimeGenerator.html">DateTimeGenerator</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/DictionaryGenerator.html">DictionaryGenerator</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/ForeignKeyGenerator.html">ForeignKeyGenerator</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/MaxKeyGenerator.html">MaxKeyGenerator</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/NullGenerator.html">NullGenerator</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/NumberGenerator.html">NumberGenerator</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/StringGenerator.html">StringGenerator</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/generator/StringKeyGenerator.html">StringKeyGenerator</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster">pl.kernelpanic.dbmonster</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_schema">pl.kernelpanic.dbmonster.schema</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#java_lang">java.lang</a>
+                  </li>
+                  <li>
+                    <a href="#java_math">java.math</a>
+                  </li>
+                  <li>
+                    <a href="#java_sql">java.sql</a>
+                  </li>
+                  <li>
+                    <a href="#java_text">java.text</a>
+                  </li>
+                  <li>
+                    <a href="#java_util">java.util</a>
+                  </li>
+                  <li>
+                    <a href="#org_apache_commons_logging">org.apache.commons.logging</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster">pl.kernelpanic.dbmonster</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_connection">pl.kernelpanic.dbmonster.connection</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_schema">pl.kernelpanic.dbmonster.schema</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_util">pl.kernelpanic.dbmonster.util</a>
+                  </li>
+                </ul>
+              </td></tr>
+          </tbody></table></div><div class="subsection"><h3><a name="pl_kernelpanic_dbmonster_schema">pl.kernelpanic.dbmonster.schema</a></h3><table class="bodyTable"><thead>
+            <tr class="b"><th>Afferent Couplings</th><th>Efferent Couplings</th><th>Abstractness</th><th>Instability</th><th>Distance</th></tr>
+          </thead><tbody>
+            <tr class="a"><td>2</td><td>15</td><td>0%</td><td>88%</td><td>12%</td></tr>
+          </tbody></table><table class="bodyTable"><thead>
+            <tr class="b"><th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th></tr>
+          </thead><tbody>
+            <tr class="a"><td>
+                <em>None</em>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/schema/Column.html">Column</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/schema/ColumnPredicate.html">ColumnPredicate</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/schema/SchemaUtil.html">GeneratorFactory</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/schema/Key.html">Key</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/schema/SchemaUtil.html">KeyGeneratorFactory</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/schema/Schema.html">Schema</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/schema/SchemaException.html">SchemaException</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/schema/SchemaUtil.html">SchemaUtil</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/schema/SchemaUtil.html">SchemaUtil$1</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/schema/Table.html">Table</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster">pl.kernelpanic.dbmonster</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_generator">pl.kernelpanic.dbmonster.generator</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#java_io">java.io</a>
+                  </li>
+                  <li>
+                    <a href="#java_lang">java.lang</a>
+                  </li>
+                  <li>
+                    <a href="#java_lang_reflect">java.lang.reflect</a>
+                  </li>
+                  <li>
+                    <a href="#java_net">java.net</a>
+                  </li>
+                  <li>
+                    <a href="#java_sql">java.sql</a>
+                  </li>
+                  <li>
+                    <a href="#java_util">java.util</a>
+                  </li>
+                  <li>
+                    <a href="#org_apache_commons_beanutils">org.apache.commons.beanutils</a>
+                  </li>
+                  <li>
+                    <a href="#org_apache_commons_collections">org.apache.commons.collections</a>
+                  </li>
+                  <li>
+                    <a href="#org_apache_commons_collections_iterators">org.apache.commons.collections.iterators</a>
+                  </li>
+                  <li>
+                    <a href="#org_apache_commons_digester">org.apache.commons.digester</a>
+                  </li>
+                  <li>
+                    <a href="#org_apache_commons_logging">org.apache.commons.logging</a>
+                  </li>
+                  <li>
+                    <a href="#org_xml_sax">org.xml.sax</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster">pl.kernelpanic.dbmonster</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_connection">pl.kernelpanic.dbmonster.connection</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_generator">pl.kernelpanic.dbmonster.generator</a>
+                  </li>
+                </ul>
+              </td></tr>
+          </tbody></table></div><div class="subsection"><h3><a name="pl_kernelpanic_dbmonster_sql">pl.kernelpanic.dbmonster.sql</a></h3><table class="bodyTable"><thead>
+            <tr class="b"><th>Afferent Couplings</th><th>Efferent Couplings</th><th>Abstractness</th><th>Instability</th><th>Distance</th></tr>
+          </thead><tbody>
+            <tr class="a"><td>1</td><td>2</td><td>0%</td><td>67%</td><td>33%</td></tr>
+          </tbody></table><table class="bodyTable"><thead>
+            <tr class="b"><th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th></tr>
+          </thead><tbody>
+            <tr class="a"><td>
+                <em>None</em>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/sql/ExtendedTypes.html">ExtendedTypes</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster">pl.kernelpanic.dbmonster</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#java_lang">java.lang</a>
+                  </li>
+                  <li>
+                    <a href="#java_util">java.util</a>
+                  </li>
+                </ul>
+              </td></tr>
+          </tbody></table></div><div class="subsection"><h3><a name="pl_kernelpanic_dbmonster_util">pl.kernelpanic.dbmonster.util</a></h3><table class="bodyTable"><thead>
+            <tr class="b"><th>Afferent Couplings</th><th>Efferent Couplings</th><th>Abstractness</th><th>Instability</th><th>Distance</th></tr>
+          </thead><tbody>
+            <tr class="a"><td>2</td><td>3</td><td>0%</td><td>60%</td><td>40%</td></tr>
+          </tbody></table><table class="bodyTable"><thead>
+            <tr class="b"><th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th></tr>
+          </thead><tbody>
+            <tr class="a"><td>
+                <em>None</em>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/util/Converter.html">Converter</a>
+                  </li>
+                  <li>
+                    <a href="xref/pl/kernelpanic/dbmonster/util/ScriptReaderIterator.html">ScriptReaderIterator</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster">pl.kernelpanic.dbmonster</a>
+                  </li>
+                  <li>
+                    <a href="#pl_kernelpanic_dbmonster_generator">pl.kernelpanic.dbmonster.generator</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#java_io">java.io</a>
+                  </li>
+                  <li>
+                    <a href="#java_lang">java.lang</a>
+                  </li>
+                  <li>
+                    <a href="#java_util">java.util</a>
+                  </li>
+                </ul>
+              </td></tr>
+          </tbody></table></div></div><div class="section"><h2><a name="Cycles">Cycles</a></h2><p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Packages">packages</a>] [
+        <a href="#Cycles">cycles</a>] [
+        <a href="#Explanations">explanations</a>]</p><table class="bodyTable"><thead>
+          <tr class="b"><th>Package</th><th>Cyclic Dependencies</th></tr>
+        </thead><tbody>
+          <tr class="a"><td>pl.kernelpanic.dbmonster</td><td>
+              <ul>
+                <li>pl.kernelpanic.dbmonster.schema</li>
+                <li>pl.kernelpanic.dbmonster.generator</li>
+                <li>pl.kernelpanic.dbmonster</li>
+              </ul>
+            </td></tr>
+          <tr class="b"><td>pl.kernelpanic.dbmonster.generator</td><td>
+              <ul>
+                <li>pl.kernelpanic.dbmonster</li>
+                <li>pl.kernelpanic.dbmonster.schema</li>
+                <li>pl.kernelpanic.dbmonster.generator</li>
+              </ul>
+            </td></tr>
+          <tr class="a"><td>pl.kernelpanic.dbmonster.schema</td><td>
+              <ul>
+                <li>pl.kernelpanic.dbmonster.generator</li>
+                <li>pl.kernelpanic.dbmonster</li>
+                <li>pl.kernelpanic.dbmonster.schema</li>
+              </ul>
+            </td></tr>
+        </tbody></table></div><div class="section"><h2><a name="Explanations">Explanations</a></h2><p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Packages">packages</a>] [
+        <a href="#Cycles">cycles</a>] [
+        <a href="#Explanations">explanations</a>]</p><p>The following explanations are for quick reference and are lifted directly from the original
+        <a href="http://www.clarkware.com/software/JDepend.html">JDepend documentation</a>.</p><table class="bodyTable"><thead>
+          <tr class="b"><th>Term</th><th>Description</th></tr>
+        </thead><tbody>
+          <tr class="a"><td>Number of Classes</td><td>The number of concrete and abstract classes (and interfaces) in the package is an indicator of the extensibility of the package.</td></tr>
+          <tr class="b"><td>Afferent Couplings</td><td>The number of other packages that depend upon classes within the package is an indicator of the package's responsibility.</td></tr>
+          <tr class="a"><td>Efferent Couplings</td><td>The number of other packages that the classes in the package depend upon is an indicator of the package's independence.</td></tr>
+          <tr class="b"><td>Abstractness</td><td>The ratio of the number of abstract classes (and interfaces) in the analyzed package to the total number of classes in the analyzed package. The range for this metric is 0 to 1, with A=0 indicating a completely concrete package and A=1 indicating a completely abstract package.</td></tr>
+          <tr class="a"><td>Instability</td><td>The ratio of efferent coupling (Ce) to total coupling (Ce / (Ce + Ca)). This metric is an indicator of the package's resilience to change. The range for this metric is 0 to 1, with I=0 indicating a completely stable package and I=1 indicating a completely instable package.</td></tr>
+          <tr class="b"><td>Distance</td><td>The perpendicular distance of a package from the idealized line A + I = 1. This metric is an indicator of the package's balance between abstractness and stability. A package squarely on the main sequence is optimally balanced with respect to its abstractness and stability. Ideal packages are either completely abstract and stable (x=0, y=1) or completely concrete and instable (x=1, y=0). The range for this metric is 0 to 1, with D=0 indicating a package that is coincident with the main sequence and D=1 indicating a package that is as far from the main sequence as possible.</td></tr>
+          <tr class="a"><td>Cycles</td><td>Packages participating in a package dependency cycle are in a deadly embrace with respect to reusability and their release cycle. Package dependency cycles can be easily identified by reviewing the textual reports of dependency cycles. Once these dependency cycles have been identified with JDepend, they can be broken by employing various object-oriented techniques.</td></tr>
+        </tbody></table></div></div></div><div class="clear"><hr></hr></div><div id="footer"><div class="xright">© 2003-2004, .:. kernelpanic.pl .:.</div><div class="clear"><hr></hr></div></div></body></html>

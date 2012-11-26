@@ -1,0 +1,51 @@
+#!/bin/bash
+
+#=================================================================
+# | ENVIRONMENT VARIABLES |
+# +-----------------------+
+#
+# JAVA_HOME             - JDK HOME  
+# CLASSPATH             - classpath
+# JAVA_OPTS             - addtional java options (typically -D)
+# DBMONSTER_HOME        - dbmonster home
+#=================================================================
+PRG="$0"
+
+while [ -h "$PRG" ] ; do
+  ls=`ls -ld "$PRG"`
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '.*/.*' > /dev/null; then
+     PRG="$link"                                                                                             
+  else                                                                                                      
+     PRG=`dirname "$PRG"`/"$link"
+  fi
+done
+
+if [ -z $DBMONSTER_HOME ]; then
+    echo -n "Setting DBMONSTER_HOME to: "
+    DBMONSTER_HOME="`echo $PRG | sed -e 's#/[^/]*$##'`/.."
+    echo $DBMONSTER_HOME
+fi
+
+if [ ! -x $JAVA_HOME/bin/java ]; then
+    JAVA_EXEC=`which java`
+    if [ -z JAVA_EXEC ]; then
+        echo "JAVA_HOME not set!"
+    else 
+        JAVA_HOME=`echo $JAVA_EXEC | sed -e 's#[^/]*$##'`
+    fi
+    echo "Setting JAVA_HOME to: $JAVA_HOME"
+fi
+
+SEPARATOR=":"
+
+if [ ! -z `uname -a | grep cygwin` ]; then
+    SEPARATOR=";"
+fi
+
+for I in `ls -1 $DBMONSTER_HOME/*.jar $DBMONSTER_HOME/lib/* $DBMONSTER_HOME/log4j.properties`; do
+    CLASSPATH="$CLASSPATH$SEPARATOR$I"
+done
+
+$JAVA_HOME/bin/java $JAVA_OPTS -classpath $CLASSPATH pl.kernelpanic.dbmonster.Launcher $*
+

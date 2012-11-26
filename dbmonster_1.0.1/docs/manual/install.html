@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>DBMonster - The DBMonster User's Guide - Installation</title><style type="text/css" media="all">
+          @import url("../style/maven-base.css");
+          
+			    @import url("../style/maven-theme.css");</style><link rel="stylesheet" href="../style/print.css" type="text/css" media="print"></link><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="author" content="Piotr Maj"></meta><meta name="email" content="piotr.maj@kernelpanic.pl"></meta></head><body class="composite"><div id="banner"><a href="http://dbmonster.kernelpanic.pl/" id="projectLogo"><img alt="dbMonster" src="../gfx/dbmonster-logo.png"></img></a><div class="clear"><hr></hr></div></div><div id="breadcrumbs"><div class="xleft">
+                	Last published: 25 05 2004 22:57 CEST
+                  | Doc for 1.0.1</div><div class="xright"></div><div class="clear"><hr></hr></div></div><div id="leftColumn"><div id="navcolumn"><div id="menuOverview"><h5>Overview</h5><ul><li class="none"><a href="../news.html">What's new?</a></li><li class="none"><a href="../downloads.html">Downloads</a></li><li class="expanded"><a href="../manual/index.html">Manual</a></li><li class="none"><a href="../manual/intro.html">Introduction</a></li><li class="none"><strong><a href="../manual/install.html">Instalation</a></strong></li><li class="none"><a href="../manual/config-running.html">Configuration</a></li><li class="none"><a href="../manual/ant-task.html">Ant task</a></li><li class="none"><a href="../manual/key-generators.html">Key generators</a></li><li class="collapsed"><a href="../manual/data-generators.html">Data generators</a></li><li class="none"><a href="../faq.html">FAQ</a></li><li class="none"><a href="../resources.html">Resources</a></li></ul></div><div id="search"><h5>Search dbMonster</h5><form action="http://www.google.com/search" method="get"><a href="http://www.google.com" class="navlink"><img height="32" width="75" alt="Google" src="http://www.google.com/logos/Logo_25wht.gif"></img></a><input name="q" maxlength="255" size="15" type="text" value="" id="q"></input><input name="btnG" type="submit" value="Go" id="btnG"></input><input name="domains" type="hidden" value="http://dbmonster.kernelpanic.pl"></input><input name="sitesearch" type="hidden" value="http://dbmonster.kernelpanic.pl" id="search"></input></form></div><div id="menuProject_Documentation"><h5>Project Documentation</h5><ul><li class="none"><a href="../index.html">About dbMonster</a></li><li class="collapsed"><a href="../project-info.html">Project Info</a></li><li class="collapsed"><a href="../maven-reports.html">Project Reports</a></li><li class="none"><a href="http://maven.apache.org/development-process.html">Development Process</a></li></ul></div><a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy"><img alt="Built by Maven" src="../images/logos/maven-button-1.png"></img></a></div></div><div id="bodyColumn"><div class="contentBox"><div class="section"><h2><a name="Get_your_copy_of_DBMonster">Get your copy of DBMonster</a></h2><p>
+       A fresh copy of DBMonster can be downloaded from the 
+       <a href="http://sourceforge.net/project/showfiles.php?group_id=73071">
+       project's download page</a> at sourceforge.net. 
+       You can found there tested, working releases ready to run.
+       <br></br>
+       If you like living on the edge you may try checkout the latest 
+       version from the CVS repository. Check 
+       <a href="http://sourceforge.net/cvs/?group_id=73071">this page</a> 
+       to find out how. Be warned that CVS HEAD revision may not work or 
+       even compile (but it usually does :-).
+    </p></div><div class="section"><h2><a name="Requirements">Requirements</a></h2><p>
+       DBMonster is distributed with all libraries it needs. The only software
+       you have to have are:
+          <ul>
+            <li>JRE or J2SDK, version 1.4.0 or higher,</li>
+            <li>JDBC driver for your database.</li>
+          </ul>
+    </p></div><div class="section"><h2><a name="Building_from_sources">Building from sources</a></h2><p>
+        DBMonster uses <a href="http://maven.apache.org/">Maven</a> as a build system.
+        To build DBMonster from sources:
+            <ol>
+                <li>Download and install the latest Maven distribution.</li>
+                <li>Grab DBMonster module from CVS.</li>
+                <li>cd to dbmonster's root directory</li>
+                <li>type: maven dist</li>
+                <li>That's it!</li>
+            </ol>
+    </p><p>
+      You may encounter problems when building in non GUI environment 
+      (i.e. shell under Linux). If some tests fail try this (you must 
+      have at least J2SDK 1.4.0 to build DBMonster):
+    </p>
+    <div class="source"><pre>maven -Djava.awt.headless=true &lt;GOAL&gt;</pre></div>
+  </div></div></div><div class="clear"><hr></hr></div><div id="footer"><div class="xright">© 2003-2004, .:. kernelpanic.pl .:.</div><div class="clear"><hr></hr></div></div></body></html>

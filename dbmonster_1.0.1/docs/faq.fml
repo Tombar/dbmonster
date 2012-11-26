@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs title="Frequently Asked Questions">
+
+  <part id="running">
+    <title>Running dbMonster</title>
+   
+    <faq id="verbose">
+      <question>
+        How to force dbMonster to be more verbose?
+      </question>
+      <answer>
+        <ol>
+          <li>Unpack dbmonster-VERSION.jar,</li>
+          <li>edit log4j.properties to adjust it for your needs,</li>
+          <li>repack the jar,</li>
+          <li>rerun dbMonster.</li>
+        </ol>
+        dbMonster uses Log4j for logging. The documentation may be found
+        <a href="http://jakarta.apache.org/log4j/docs/documentation.html">here</a>.
+        Be careful: setting all log levels to DEBUG will produce 
+        _a_lot_ of more or less helpful messages.
+      </answer>
+    </faq>
+
+ <faq id="schema">
+      <question>
+        I tried SchemaGrabber with Oracle and it grabbed all tables including
+        the system tables? Are schemas supported?
+      </question>
+      <answer>
+		Yes. To grab only tables from one schema you must add 
+		<code>dbmonster.jdbc.schema=schema_name</code> property to the configuration
+		file.<br/><br/>
+		You may use schema in the configuration file (just rename your table name to
+		schema_name.table_name) but be careful with generators which rely on this table:
+		in other words if you name your table MYSCHEMA.MYTABLE you must use this full 
+		name i.e. in ForeignKeyGenerator.<br/><br/>
+		It is a good habit to always use schemas with schema-enabled databases and not to use
+		schema part of the table name on other databases.
+      </answer>
+    </faq>
+  </part>
+  
+</faqs>
