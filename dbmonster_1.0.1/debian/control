@@ -1,0 +1,11 @@
+Source: dbmonster
+Maintainer: Martin Loy <martin@guruhub.com.uy>
+Section: misc
+Priority: optional
+Standards-Version: 1.0.1
+Build-Depends: debhelper (>= 8)
+
+Package: dbmonster
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A tool which generates random test data and puts it into SQL database. It helps to test how an application can deal with large database.
